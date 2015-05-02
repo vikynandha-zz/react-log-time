@@ -15,3 +15,7 @@ Example:
 ```jsx
 <LogTime value={new Date} className="text-muted">
 ```
+
+## Auto-update
+
+Once rendered, the text will be auto-updated in real-time. Just like the time of comment in Facebook updates.
