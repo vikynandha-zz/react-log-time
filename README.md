@@ -1,4 +1,4 @@
-# react-datetime
+# Log time React component
 
 React component to render a time in the `x minutes ago` format and show a tooltip on hover, with full date and time.
 
