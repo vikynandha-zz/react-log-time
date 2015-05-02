@@ -48,7 +48,6 @@ var LogTime = React.createClass({
     setTimeout: function() {
         var timeoutDelay = this.getTimeoutDelay();
         if (timeoutDelay) {
-            console.log('Will check after', timeoutDelay, 'ms');
             this.timeoutId = setTimeout(function() {
                 this.setState(this.getInitialState());
             }.bind(this), timeoutDelay);
