@@ -149,4 +149,14 @@ describe('LogTime', function() {
         expect(logTime.getDOMNode().title).toEqual('Mon, 24 Sep at 5:30 am');
     });
 
+    it('renders the className passed as props', function() {
+        var time = new Date('1990-09-24T05:30:00+0530');
+
+        var logTime = TestUtils.renderIntoDocument(
+            <LogTime value={time} className="text-muted" />
+        );
+
+        expect(logTime.getDOMNode().className).toEqual('text-muted');
+    });
+
 });

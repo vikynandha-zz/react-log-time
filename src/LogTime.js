@@ -4,10 +4,11 @@ var moment = require('../node_modules/moment');
 var LogTime = React.createClass({
 
     render: function() {
-        var time = moment(this.props.value);
+        var { value, ...otherProps } = this.props;
+        var time = moment(value);
 
         return (
-            <span title={time.format('ddd, D MMM [at] h:mm a')}>
+            <span {...otherProps} title={time.format('ddd, D MMM [at] h:mm a')}>
                 {time.fromNow()}
             </span>
         );
