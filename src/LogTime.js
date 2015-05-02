@@ -49,6 +49,7 @@ var LogTime = React.createClass({
         var timeoutDelay = this.getTimeoutDelay();
         if (timeoutDelay) {
             this.timeoutId = setTimeout(function() {
+                // call setState with the same state, to re-render
                 this.setState(this.getInitialState());
             }.bind(this), timeoutDelay);
         }

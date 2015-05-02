@@ -159,4 +159,17 @@ describe('LogTime', function() {
         expect(logTime.getDOMNode().className).toEqual('text-muted');
     });
 
+    it('sets timeout for re-render', function() {
+        var time = new Date;
+
+        var logTime = TestUtils.renderIntoDocument(
+            <LogTime value={time} />
+        );
+
+        expect(setTimeout.mock.calls.length).toBe(1);
+        jest.runOnlyPendingTimers();
+        expect(setTimeout.mock.calls.length).toBe(2);
+        jest.clearAllTimers();
+    });
+
 });
