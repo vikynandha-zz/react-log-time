@@ -1,0 +1,28 @@
+{
+  "name": "react-datetime",
+  "version": "0.0.0",
+  "description": "React component to render date/time values",
+  "repository": "https://github.com/vikynandha/react-datetime/tree/master",
+  "main": "src/LogTime.js",
+  "dependencies": {
+    "moment": "^2.10.2",
+    "react": "^0.13.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "./preprocessor.js",
+      "unmockedModulePathPatterns": [
+          "./node_modules/react",
+          "./node_modules/moment"
+      ]
+  },
+  "keywords": [
+    "react",
+    "date",
+    "moment"
+  ],
+  "author": "Vignesh Nandha Kumar <viky.nandha@gmail.com>",
+  "license": "MIT"
+}
